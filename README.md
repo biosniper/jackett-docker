@@ -4,21 +4,19 @@ Based off of sdesbure/arch-jackett with a couple of space optimisations and newe
 
 Jackett - https://github.com/Jackett/Jackett
 
-**Pull image**
-
+**Pull image:**
 ```
 docker pull biosniper/jackett
 ```
 
 **To run:**
-
 ```
 docker run -d -p 9117:9117 --name=jackett -v /etc/localtime:/etc/localtime:ro biosniper/jackett
 ```
 -v /etc/localtime:/etc/localtime:ro is required as mono may throw errors otherwise
+I've only see this a few times, but better to be safe I guess!
 
 **Map volumes:**
-
 ```
 docker run -d -p 9117:9117 --name=jackett -v <path for config files>:/config -v <path for jackett files>:/usr/share/Jackett/.config/Jackett/ -v /etc/localtime:/etc/localtime:ro biosniper/jackett
 ```
