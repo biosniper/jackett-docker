@@ -10,12 +10,11 @@ Jackett - https://github.com/Jackett/Jackett
 docker pull biosniper/jackett
 ```
 
-**To run:**
+**To run (and store your configs in the image - NOT RECOMMENDED incase of upgrades):**
 ```
 docker run -d -p 9117:9117 --name=jackett -v /etc/localtime:/etc/localtime:ro biosniper/jackett
 ```
--v /etc/localtime:/etc/localtime:ro is required as mono may throw errors otherwise
-
+-v /etc/localtime:/etc/localtime:ro is required as mono may throw errors otherwise.
 I've only see this a few times, but better to be safe I guess!
 
 **Map volumes (Recommended):**
