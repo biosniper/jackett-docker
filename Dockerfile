@@ -17,8 +17,8 @@ RUN chown -R jackett: /opt/Jackett
 #Map /config to host defined config path (used to store configuration from supervisor)
 VOLUME /config
 
-#Map /opt/Jackett/.config/Jackett to host defined config path (used to store configuration from Jackett)
-VOLUME /opt/Jackett/.config/Jackett
+#Map /root/.config/Jackett to host defined config path (used to store configuration from Jackett)
+VOLUME /root/.config/Jackett
 
 #Expose port for http
 EXPOSE 9117
@@ -26,4 +26,3 @@ EXPOSE 9117
 #Run
 ENTRYPOINT ["/usr/bin/mono", "--debug", "/opt/Jackett/JackettConsole.exe"]
 CMD ["-x", "true"]
-
