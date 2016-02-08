@@ -4,7 +4,7 @@ Based off of sdesbure/arch-jackett with a couple of space optimisations and newe
 Also fixed configs not saving. Currently Jackett runs as root which is not ideal but I will fix this later.
 
 Jackett - https://github.com/Jackett/Jackett
-Version: 0.7.142
+Version: 0.7.168
 
 **Pull image:**
 ```
