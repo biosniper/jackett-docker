@@ -4,7 +4,7 @@ Based off of sdesbure/arch-jackett with a couple of space optimisations and newe
 Also fixed configs not saving. Currently Jackett runs as root which is not ideal but I will fix this later.
 
 Jackett - https://github.com/Jackett/Jackett
-Version: 0.7.168
+Version: 0.7.181
 
 **Pull image:**
 ```
@@ -15,6 +15,7 @@ docker pull biosniper/jackett
 ```
 docker run -d -p 9117:9117 --name=jackett -v /etc/localtime:/etc/localtime:ro biosniper/jackett
 ```
+
 -v /etc/localtime:/etc/localtime:ro is required as mono may throw errors otherwise.
 I've only see this a few times, but better to be safe I guess!
 
